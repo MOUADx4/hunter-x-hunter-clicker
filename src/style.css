@@ -1,0 +1,451 @@
+/* =======================================================
+   HUNTER x HUNTER COOKIE CLICKER RPG THEME (FULL)
+   Inspired by Cookie Clicker Premium UI
+======================================================= */
+
+/* ---------------- GLOBAL ---------------- */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+
+  /* IMPORTANT : plus aucun background ici */
+  background: none;
+
+  color: white;
+  overflow-x: hidden;
+}
+
+h2 {
+  font-family: "Orbitron", sans-serif;
+  text-transform: uppercase;
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+
+p {
+  margin: 5px 0;
+}
+
+/* ---------------- APP ROOT ---------------- */
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+}
+
+.app-container {
+  width: 1250px;
+  max-width: 96%;
+}
+
+/* ---------------- HEADER ---------------- */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.hxh-logo {
+  width: 220px;
+  filter: drop-shadow(0 0 15px rgba(255, 180, 0, 0.9));
+}
+
+.header-actions {
+  display: flex;
+  gap: 15px;
+}
+
+/* ---------------- MAIN GRID (3 PANELS) ---------------- */
+.game-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr 1fr;
+  gap: 25px;
+  align-items: start;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------------- CARD RPG PANEL ---------------- */
+.card {
+  background: linear-gradient(180deg, #2b2b30, #101010);
+  border: 3px solid rgba(255, 200, 80, 0.35);
+  border-radius: 14px;
+  padding: 18px;
+  margin-bottom: 18px;
+
+  box-shadow:
+    inset 0 0 12px rgba(255, 255, 255, 0.05),
+    0 0 25px rgba(0, 0, 0, 0.85);
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* HEADER TITLE STYLE */
+.card h2 {
+  margin: -18px -18px 15px -18px;
+  padding: 12px;
+  text-align: center;
+
+  background: linear-gradient(90deg, #3c3c3f, #191919);
+  border-bottom: 2px solid rgba(255, 200, 80, 0.25);
+
+  color: gold;
+  text-shadow: 0 0 8px rgba(255, 200, 0, 0.75);
+
+  border-radius: 14px 14px 0 0;
+}
+
+/* ---------------- INPUT RPG ---------------- */
+.input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 200, 80, 0.25);
+  background: rgba(0, 0, 0, 0.35);
+  color: white;
+  font-size: 15px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: gold;
+  box-shadow: 0 0 10px rgba(255, 200, 0, 0.6);
+}
+
+/* ---------------- BUTTONS COOKIE CLICKER 3D ---------------- */
+.btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+
+  border-radius: 12px;
+  border: 2px solid rgba(255, 200, 80, 0.45);
+
+  background: linear-gradient(180deg, #ffcc33, #aa5500);
+  color: black;
+
+  font-weight: bold;
+  font-size: 15px;
+
+  cursor: pointer;
+
+  box-shadow:
+    inset 0 2px 6px rgba(255, 255, 255, 0.25),
+    0 6px 0 rgba(120, 60, 0, 0.85);
+
+  transition: 0.15s;
+}
+
+.btn:hover {
+  filter: brightness(1.2);
+  transform: scale(1.02);
+}
+
+.btn:active {
+  transform: translateY(4px);
+  box-shadow:
+    inset 0 2px 6px rgba(255, 255, 255, 0.25),
+    0 2px 0 rgba(120, 60, 0, 0.85);
+}
+
+/* SECONDARY HEADER BUTTONS */
+.btn.secondary {
+  width: auto;
+  padding: 10px 16px;
+  background: linear-gradient(180deg, #444, #111);
+  color: white;
+  border: 2px solid rgba(255, 200, 80, 0.25);
+}
+
+.btn.secondary:hover {
+  filter: brightness(1.3);
+}
+
+/* DANGER PRESTIGE */
+.btn.danger {
+  background: linear-gradient(180deg, crimson, darkred);
+  color: white;
+}
+
+/* BONUS BUTTON */
+.bonus-active {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ---------------- MAIN CLICK SYMBOL ---------------- */
+.center {
+  text-align: center;
+}
+
+.main-click {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+
+  border: 6px solid gold;
+  background: radial-gradient(circle, #ff8800, #550000);
+
+  box-shadow:
+    0 0 30px rgba(255, 180, 0, 0.85),
+    0 0 90px rgba(255, 100, 0, 0.6);
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.main-click:hover {
+  transform: scale(1.1);
+}
+
+.main-click img {
+  width: 80%;
+  animation: spinNen 8s linear infinite;
+}
+
+@keyframes spinNen {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ---------------- SHOP ITEMS ---------------- */
+.upgrade-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px;
+  margin: 10px 0;
+
+  border-radius: 12px;
+  border: 2px solid rgba(255, 200, 80, 0.25);
+
+  background: rgba(0, 0, 0, 0.35);
+  color: white;
+
+  transition: 0.2s;
+}
+
+.upgrade-item:hover {
+  background: rgba(255, 150, 0, 0.15);
+  transform: scale(1.02);
+}
+
+.upgrade-item button {
+  width: auto;
+  padding: 8px 14px;
+  font-size: 13px;
+}
+
+/* ---------------- FLOATING TEXT (+1) ---------------- */
+.floating-text {
+  position: fixed;
+  font-weight: bold;
+  font-size: 18px;
+  color: gold;
+  pointer-events: none;
+  text-shadow: 0 0 12px rgba(255, 200, 0, 0.9);
+  animation: floatUp 1s ease forwards;
+}
+
+@keyframes floatUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-70px);
+  }
+}
+
+/* ---------------- SUCCESS POPUP ---------------- */
+.success-popup {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: linear-gradient(90deg, cyan, gold);
+  color: black;
+
+  padding: 18px 35px;
+  border-radius: 18px;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.65);
+
+  animation: popup 0.4s ease;
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+/* ---------------- NEN PARTICLES ---------------- */
+.nen-particles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.nen-particles span {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: gold;
+  opacity: 0.6;
+  animation: floatNen infinite ease-in-out;
+}
+
+@keyframes floatNen {
+  0% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateY(-90px) scale(1.6);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-200px) scale(0.8);
+    opacity: 0;
+  }
+}
+
+/* ---------------- SAVE INPUT ---------------- */
+.file-input-label {
+  display: block;
+  margin-top: 10px;
+  padding: 12px;
+  text-align: center;
+
+  border-radius: 12px;
+  cursor: pointer;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 200, 80, 0.25);
+}
+
+.file-input-label:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.file-input {
+  display: none;
+}
+
+
+/* ===== CENTER CLICK WRAP (label +1 par clic) ===== */
+.click-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.click-sub {
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 10px rgba(255, 200, 0, 0.7);
+}
+
+.click-plus {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 200, 80, 0.3);
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* ===== SHOP COOKIE CLICKER ROWS ===== */
+.shop-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.shop-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 12px;
+  border-radius: 12px;
+
+  border: 2px solid rgba(255, 200, 80, 0.22);
+  background: rgba(0, 0, 0, 0.35);
+
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.04);
+}
+
+.shop-left {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.shop-name {
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.shop-cost {
+  opacity: 0.9;
+  color: #ffd27a;
+  font-weight: 700;
+}
+
+/* Bouton "Acheter" plus compact à droite */
+.buy-btn {
+  width: auto;
+  padding: 10px 16px;
+  font-size: 14px;
+  margin-top: 0;
+}
+
+/* ===== BONUS BUTTON looks like the image ===== */
+.btn.bonus-like {
+  background: linear-gradient(180deg, #ffcc33, #aa5500);
+}
+
+/* ===== Make center panel feel “focused” ===== */
+.panel.center .card.center {
+  padding-top: 22px;
+}
+/* ===============================
+   BACKGROUND VIDEO WALLPAPER
+================================ */
+
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: -5;
+  opacity: 0.25;
+
+  filter: blur(2px) brightness(0.6);
+}
