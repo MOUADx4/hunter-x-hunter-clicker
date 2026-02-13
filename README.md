@@ -128,6 +128,7 @@ Le jeu sauvegarde automatiquement :
 
 ``` md
 ![Hunter Clicker Preview](./captures/interface.png)
+
 ```
 
 ------------------------------------------------------------------------
