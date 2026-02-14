@@ -127,6 +127,7 @@ Le jeu sauvegarde automatiquement :
 
 
 ![Hunter Clicker Preview](./captures/interface.png)
+![Hunter Clicker Preview](./captures/interface_dark.png)
 
 
 ------------------------------------------------------------------------
