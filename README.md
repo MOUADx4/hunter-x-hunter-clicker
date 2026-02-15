@@ -60,11 +60,21 @@ Le jeu reprend une ambiance fidèle à Hunter x Hunter :
 
 ``` bash
 src/
- ├── components/        # UI Components (ClickButton, Stats, Shop...)
- ├── data/              # Machines & améliorations
- ├── assets/            # Logos, symboles, backgrounds
- ├── App.jsx            # Logique principale du jeu
- ├── style.css          # Thème RPG complet + animations
+ ├ App.jsx
+ ├ style.css
+
+ ├ hooks/
+ │   ├ useGame.js
+ │   ├ useSave.js
+ │   └ useSounds.js
+
+ ├ components/
+ │   ├ Panels.jsx
+ │   └ Effects.jsx
+ │   ├ ClickButton.jsx
+ │   ├ Stats.jsx
+ │   └ AmeliorationsList.jsx
+
 ```
 
 ------------------------------------------------------------------------
